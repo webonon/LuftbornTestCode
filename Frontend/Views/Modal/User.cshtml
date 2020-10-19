@@ -1,0 +1,22 @@
+﻿@using DomainModels.Models
+@model User
+
+@{
+    ViewData["Title"] = "User";
+}
+
+<div >
+    <h3 class="display-4 ">@Model.Name</h3>
+    <pre>
+    <strong>UserId</strong>&nbsp;<span>@Model.Id</span> 
+    <strong>Name</strong>&nbsp;@Model.Name
+    <strong>UserName</strong>&nbsp;@Model.UserName
+    <strong>Email</strong>&nbsp;@Model.Email
+    <strong>Address</strong>&nbsp;@Model.Address
+    <strong>Phone Number</strong>&nbsp;@Model.PhoneNumber
+    <strong>Created Date</strong>&nbsp;@Model.CreatedAt.Value.ToString("dd-MM-yyyy")
+    <strong>Modified Date</strong>&nbsp;@Model.ModifiedAt.Value.ToString("dd-MM-yyyy")
+    </pre>
+</div>
+
+

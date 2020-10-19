@@ -1,0 +1,30 @@
+﻿@using DomainModels.Models
+@model User
+
+@{
+    ViewData["Title"] = "User";
+}
+
+
+<div class="text-center">
+    <h3 class="display-4 "> @(string.IsNullOrEmpty(Model.Id) ? "Register" : Model.Name)</h3>
+    <fieldset>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" asp-for="Name">
+
+        <label for="user-name">User Name:</label>
+        <input type="text" id="user-name" name="userName" asp-for="UserName">
+
+        <label for="mail">Email:</label>
+        <input type="email" id="mail" name="email" asp-for="Email">
+
+        <label for="phone-number">Phone Number:</label>
+        <input type="tel" id="phone-number" name="phoneNumber" asp-for="PhoneNumber">
+
+        <label for="address">Address:</label>
+        <textarea type="text" id="address" name="address" asp-for="Address" rows="2"></textarea>
+    </fieldset>
+
+    <button type="button" class="button-1 submit-user" id="submit-user">@(string.IsNullOrEmpty(Model.Id) ? "Add" : "Save")</button>
+</div>
+
